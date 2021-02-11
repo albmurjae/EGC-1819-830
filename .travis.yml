@@ -15,11 +15,10 @@ install:
 before_script: 
 - cp local_settings.travis.py local_settings.py
 - psql -c "create user decide with password 'decide'"
-- psql -c "create database test_decide owner decide"
-- psql -c "ALTER USER decide CREATEDB"
+- psql -c "create database decide owner decide"
 - python manage.py migrate
 script: 
-- python manage.py test #store si solo queremos un modulo, luego lo quitamos
+- python manage.py test store #si solo queremos un modulo, luego lo quitamos
 addons:
   postgresql: "9.6"
 branches:
