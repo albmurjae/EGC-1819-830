@@ -18,9 +18,9 @@ before_script:
 - psql -c "create database decide owner decide"
 - python manage.py migrate
 script: 
-- python manage.py test store #si solo queremos un modulo, luego lo quitamos
+- python manage.py test #store si solo queremos un modulo, luego lo quitamos
 addons:
   postgresql: "9.6"
-branches:
-  only:
-   - master
+#branches:
+  #only:
+   #- master
