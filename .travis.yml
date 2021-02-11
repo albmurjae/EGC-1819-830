@@ -1,3 +1,4 @@
+dist: xenial
 language: python 
 python: 
 - "3.6"
@@ -25,3 +26,10 @@ addons:
 branches:
   only:
    - master
+
+
+deploy:
+  provider: heroku
+  app: pruebaegcalberto
+  strategy: git
+  apikey: 5f495c45-15e3-4b4c-ad75-40b3bc9e7eee
